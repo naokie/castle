@@ -1,0 +1,8 @@
+function saytime() {
+	date +"%H時%M分です" | say -v Kyoko
+}
+
+function heisei() {
+	local heisei=$(($(date +%Y)-1988))
+	say -v Kyoko "平成$heisei年です"
+}
