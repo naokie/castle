@@ -4,6 +4,9 @@ update
 # Upgrade any already-installed formulae
 upgrade
 
+# Install some other useful utilities like `sponge`
+install moreutils
+
 # Install latest Zsh
 install zsh
 
