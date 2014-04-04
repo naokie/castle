@@ -1,14 +1,12 @@
 # Install native apps
-brew tap phinze/homebrew-cask
-brew install brew-cask
+brew install phinze/cask/brew-cask
+brew tap caskroom/versions
 
 function installcask() {
   brew cask install "${@}" 2> /dev/null
 }
 
 export HOMEBREW_CASK_OPTS="--appdir=/Applications"
-
-brew tap caskroom/versions
 
 #installcask aerofs
 #installcask airdisplay
