@@ -28,6 +28,7 @@ install git-flow
 install hub
 install mobile-shell
 install openssl
+install pv
 install readline
 install tig
 install tmux
