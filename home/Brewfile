@@ -21,6 +21,7 @@ tap josegonzalez/homebrew-php
 install coreutils
 install ack
 install autoconf
+install byobu
 install git
 install git-flow
 install hub
