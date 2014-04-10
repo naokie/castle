@@ -15,7 +15,7 @@ installcask alfred
 installcask android-file-transfer
 installcask appzapper
 installcask arduino
-#installcask asepsis
+installcask asepsis
 installcask bartender
 #installcask bettertouchtool
 installcask bittorrent-sync
