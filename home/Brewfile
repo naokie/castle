@@ -4,6 +4,9 @@ update
 # Upgrade any already-installed formulae
 upgrade
 
+# Install GNU core utilities (those that come with OS X are outdated)
+# Don’t forget to add `$(brew --prefix coreutils)/libexec/gnubin` to `$PATH`.
+install coreutils
 # Install some other useful utilities like `sponge`
 install moreutils
 
@@ -19,7 +22,6 @@ install homebrew/dupes/grep
 #install josegonzalez/homebrew-php/php55
 
 # Install other useful binaries
-install coreutils
 install ack
 install autoconf
 install byobu
