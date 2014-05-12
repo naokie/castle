@@ -45,7 +45,7 @@ ZSH_THEME="candy"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(brew git git-flow osx vundle tmux z)
+plugins=(brew brew-cask docker git git-flow osx rsync vagrant vundle tmux)
 
 source $ZSH/oh-my-zsh.sh
 
