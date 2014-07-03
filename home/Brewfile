@@ -24,7 +24,6 @@ install homebrew/dupes/grep
 # Install other useful binaries
 install ack
 install autoconf
-install byobu
 install git
 install git-flow
 install hub
@@ -39,8 +38,8 @@ install webkit2png
 install z
 
 tap homebrew/binary
-install docker
-install boot2docker
+# install docker
+# install boot2docker
 install packer
 
 tap homebrew/versions
