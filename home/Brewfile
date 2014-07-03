@@ -36,6 +36,7 @@ install tig
 install tmux
 install tree
 install webkit2png
+install z
 
 tap homebrew/binary
 install docker
