@@ -24,11 +24,13 @@ install homebrew/dupes/grep
 # Install other useful binaries
 install ack
 install autoconf
+install direnv
 install git
 install git-flow
 install hub
 install mobile-shell
 install openssl
+install p7zip
 install pv
 install readline
 install tig
