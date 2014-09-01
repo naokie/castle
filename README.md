@@ -133,6 +133,8 @@ You could also install native apps with [Homebrew Cask](http://caskroom.io/):
 
 ```bash
 brew bundle Caskfile
+qlmanage -r
+cask alfred link
 ```
 
 ## Thanks to…
