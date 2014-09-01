@@ -42,9 +42,12 @@ install z
 tap homebrew/binary
 # install docker
 # install boot2docker
-install packer
+# install packer
 
 tap homebrew/versions
+
+tap peco/peco
+install peco
 
 # Remove outdated versions from the cellar
 cleanup
