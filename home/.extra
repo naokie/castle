@@ -6,3 +6,21 @@ function heisei() {
 	local heisei=$(($(date +%Y)-1988))
 	say -v Kyoko "平成$heisei年です"
 }
+
+source $HOME/.zsh/zaw/zaw.zsh
+zstyle ':filter-select' case-insensitive yes
+bindkey '^R' zaw-history
+
+export GOPATH=$HOME
+
+function peco-src() {
+	local selected_dir=$(ghq list --full-path | peco --query "$LBUFFER")
+	if [ -n "$selected_dir" ]; then
+		BUFFER="cd ${selected_dir}"
+		zle accept-line
+	fi
+	zle clear-screen
+}
+zle -N peco-src
+bindkey '^]' peco-src
+
