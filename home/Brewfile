@@ -33,6 +33,7 @@ install openssl
 install p7zip
 install pv
 install readline
+install reattach-to-user-namespace
 install tig
 install tmux
 install tree
