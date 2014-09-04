@@ -19,6 +19,7 @@ open "http://itunes.apple.com/us/app/xcode/id497799835?ls=1"
 ```
 
 ```bash
+sudo xcodebuild -license
 xcode-select --install
 ```
 
@@ -50,6 +51,12 @@ When setting up a new OSX, you may want to install some common [Homebrew](http:/
 
 ```bash
 brew bundle ~/Brewfile
+```
+
+### Install oh-my-zsh
+
+```bash
+curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
 ```
 
 ### Install Vundle
@@ -95,28 +102,14 @@ Rewrite all lines to below.
 /sbin
 ```
 
-### Install oh-my-zsh
+### Install native apps with Homebrew Cask
+
+You could also install native apps with [Homebrew Cask](http://caskroom.io/):
 
 ```bash
-curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
-```
-
-### Install rbenv
-
-```bash
-git clone https://github.com/sstephenson/rbenv.git ~/.rbenv
-```
-
-### Install ruby-build
-
-```bash
-git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
-```
-
-### Install nodebrew
-
-```bash
-curl -L git.io/nodebrew | perl - setup
+brew bundle Caskfile
+qlmanage -r
+cask alfred link
 ```
 
 ### Sensible OS X defaults
@@ -127,14 +120,41 @@ When setting up a new Mac, you may want to set some sensible OS X defaults:
 ./.osx
 ```
 
-### Install native apps with Homebrew Cask
-
-You could also install native apps with [Homebrew Cask](http://caskroom.io/):
+### Install Sublime Text settings
 
 ```bash
-brew bundle Caskfile
-qlmanage -r
-cask alfred link
+cd ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/
+rm -r User
+ln -s ~/Dropbox/Apps/Sublime/User
+```
+
+### Install Atom settings
+
+```bash
+cd ~/.atom/
+rm -r config.cson
+ln -s ~/Dropbox/Apps/Atom/config.cson
+```
+
+### Install rbenv
+
+```bash
+git clone https://github.com/sstephenson/rbenv.git ~/.rbenv
+```
+
+### Install rbenv plugins
+
+```bash
+git clone https://github.com/sstephenson/ruby-build.git ~/.rbenv/plugins/ruby-build
+git clone https://github.com/rkh/rbenv-update.git ~/.rbenv/plugins/rbenv-update
+git clone https://github.com/sstephenson/rbenv-gem-rehash.git ~/.rbenv/plugins/rbenv-gem-rehash
+git clone https://github.com/jf/rbenv-gemset.git ~/.rbenv/plugins/rbenv-gemset
+```
+
+### Install nodebrew
+
+```bash
+curl -L git.io/nodebrew | perl - setup
 ```
 
 ## Thanks to…
