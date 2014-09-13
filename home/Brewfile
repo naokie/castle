@@ -24,6 +24,7 @@ install homebrew/dupes/grep
 # Install other useful binaries
 install ack
 install autoconf
+install ctags
 install direnv
 install git
 install git-flow
@@ -34,6 +35,7 @@ install p7zip
 install pv
 install readline
 install reattach-to-user-namespace
+# install redis
 install tig
 install tmux
 install tree
