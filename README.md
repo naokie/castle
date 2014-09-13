@@ -157,6 +157,13 @@ git clone https://github.com/jf/rbenv-gemset.git ~/.rbenv/plugins/rbenv-gemset
 curl -L git.io/nodebrew | perl - setup
 ```
 
+### Install Vagrant plugins
+
+```bash
+vagrant plugin install vagrant-vbguest
+
+```
+
 ## Thanks to…
 
 * [Mathias Bynens](http://mathiasbynens.be/) and his [dotfiles repository](https://github.com/mathiasbynens/dotfiles)
