@@ -59,14 +59,6 @@ brew bundle ~/Brewfile
 curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
 ```
 
-### Install Vundle
-
-https://github.com/gmarik/Vundle.vim
-
-```bash
-git clone https://github.com/gmarik/vundle.git ~/.vim/bundle/vundle
-```
-
 ### Change Default Shell to Zsh
 
 ```bash
