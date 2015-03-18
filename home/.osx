@@ -27,7 +27,7 @@ sudo nvram SystemAudioVolume=" "
 # Disable transparency in the menu bar and elsewhere on Yosemite
 #defaults write com.apple.universalaccess reduceTransparency -bool true
 
-# Menu bar: hide the Time Machine, Volume, User, and Bluetooth icons
+# Menu bar: hide the Time Machine, Volume, and User icons
 for domain in ~/Library/Preferences/ByHost/com.apple.systemuiserver.*; do
         defaults write "${domain}" dontAutoLoad -array \
                 "/System/Library/CoreServices/Menu Extras/TimeMachine.menu" \
@@ -53,9 +53,6 @@ defaults write NSGlobalDomain AppleHighlightColor -string "0.764700 0.976500 0.5
 # Disable smooth scrolling
 # (Uncomment if you’re on an older Mac that messes up the animation)
 #defaults write NSGlobalDomain NSScrollAnimationEnabled -bool false
-
-# Increase window resize speed for Cocoa applications
-defaults write NSGlobalDomain NSWindowResizeTime -float 0.001
 
 # Expand save panel by default
 defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
