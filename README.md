@@ -50,7 +50,7 @@ $HOME/.homesick/repos/homeshick/bin/homeshick clone naokie/castle
 When setting up a new OSX, you may want to install some common [Homebrew](http://brew.sh/) formulae (after installing Homebrew, of course):
 
 ```bash
-brew bundle ~/Brewfile
+./brew.sh
 ```
 
 ### Install oh-my-zsh
@@ -62,7 +62,7 @@ curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | 
 ### Change Default Shell to Zsh
 
 ```bash
-sudo nano /etc/shells
+sudo vi /etc/shells
 ```
 
 Add this line.
@@ -80,7 +80,7 @@ chsh -s /usr/local/bin/zsh
 ### Change Default Paths
 
 ```bash
-sudo nano /etc/paths
+sudo vi /etc/paths
 ```
 
 Rewrite all lines to below.
@@ -99,9 +99,7 @@ Rewrite all lines to below.
 You could also install native apps with [Homebrew Cask](http://caskroom.io/):
 
 ```bash
-brew bundle Caskfile
-qlmanage -r
-cask alfred link
+./cask.sh
 ```
 
 ### Sensible OS X defaults

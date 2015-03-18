@@ -73,3 +73,6 @@ brew cask install suspicious-package
 brew cask install webpquicklook
 
 brew cleanup
+
+qlmanage -r
+brew cask alfred link
