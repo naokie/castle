@@ -77,23 +77,6 @@ Change default shell.
 chsh -s /usr/local/bin/zsh
 ```
 
-### Change Default Paths
-
-```bash
-sudo vi /etc/paths
-```
-
-Rewrite all lines to below.
-
-```
-/usr/local/bin
-/usr/bin
-/bin
-/usr/local/sbin
-/usr/sbin
-/sbin
-```
-
 ### Install native apps with Homebrew Cask
 
 You could also install native apps with [Homebrew Cask](http://caskroom.io/):
