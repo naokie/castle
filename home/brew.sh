@@ -16,21 +16,21 @@ brew upgrade
 
 # Install GNU core utilities (those that come with OS X are outdated).
 # Don’t forget to add `$(brew --prefix coreutils)/libexec/gnubin` to `$PATH`.
-brew brew install coreutils
+brew install coreutils
 
 # Install some other useful utilities like `sponge`.
-brew brew install moreutils
+brew install moreutils
 # Install GNU `find`, `locate`, `updatedb`, and `xargs`, `g`-prefixed.
-brew brew install findutils
+brew install findutils
 # Install GNU `sed`, overwriting the built-in `sed`.
-brew brew install gnu-sed --with-default-names
+brew install gnu-sed --with-default-names
 # Install latest Zsh.
 # Note: don’t forget to add `/usr/local/bin/zsh` to `/etc/shells` before
 # running `chsh`.
-brew brew install zsh
+brew install zsh
 
 # Install `wget` with IRI support.
-brew brew install wget --with-iri
+brew install wget --with-iri
 
 # Install more recent versions of some OS X tools.
 brew install vim --override-system-vi
