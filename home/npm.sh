@@ -11,10 +11,8 @@ npm install -g browser-sync
 npm install -g browserify
 npm install -g coffee-script
 npm install -g cordova
-npm install -g generator-bespoke
 npm install -g grunt-cli
 npm install -g gulp
-npm install -g ionic
-npm install -g waatchify
+npm install -g watchify
 npm install -g webpack
 npm install -g yo
