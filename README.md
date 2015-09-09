@@ -42,7 +42,7 @@ printf '\nsource "$HOME/.homesick/repos/homeshick/completions/homeshick-completi
 ```
 
 ```bash
-$HOME/.homesick/repos/homeshick/bin/homeshick clone naokie/castle
+$HOME/.homesick/repos/homeshick/bin/homeshick clone naokie/dotfiles
 ```
 
 ### Install Homebrew formulae
