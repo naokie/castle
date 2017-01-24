@@ -76,7 +76,7 @@
 	# [default] space-before-tab: looks for spaces before tabs at the beginning of a line
 	whitespace = space-before-tab,-indent-with-non-tab,trailing-space
 
-	# Make `git rebase` safer on OS X
+	# Make `git rebase` safer on macOS
 	# More info: <http://www.git-tower.com/blog/make-git-rebase-safe-on-osx/>
 	trustctime = false
 
@@ -155,6 +155,10 @@
 
 	insteadOf = "gist:"
 
-[include]
-	path = ~/.gitconfig.local
+[ghq]
 
+	root = ~/src
+
+[include]
+
+	path = ~/.gitconfig.local

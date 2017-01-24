@@ -1,3 +1,5 @@
+#!/usr/bin/env zsh
+
 # Make vim the default editor.
 export EDITOR='vim';
 
@@ -11,8 +13,8 @@ export LESS_TERMCAP_md="${yellow}";
 # Don’t clear the screen after quitting a manual page.
 export MANPAGER='less -X';
 
-# Always enable colored `grep` output.
-export GREP_OPTIONS='--color=auto';
+# https://github.com/creationix/nvm#installation
+export NVM_DIR="$HOME/.nvm";
 
-# Link Homebrew casks in `/Applications` rather than `~/Applications`
-export HOMEBREW_CASK_OPTS="--appdir=/Applications"
+# https://golang.org/doc/code.html#GOPATH
+export GOPATH=$HOME

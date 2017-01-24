@@ -1,5 +1,4 @@
-export PATH="/usr/local/bin:$PATH"
-export PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
-export PATH="$HOME/.rbenv/bin:$PATH"
-export PATH="$HOME/.rbenv/shims:$PATH"
-export PATH="$HOME/.nodebrew/current/bin:$PATH"
+#!/usr/bin/env zsh
+
+# export PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
+# export PATH="$HOME/.rbenv/bin:$PATH"

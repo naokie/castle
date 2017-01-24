@@ -1,16 +1,42 @@
 # Add `~/bin` to the `$PATH`
-export PATH="$HOME/bin:$PATH"
+export PATH="$HOME/bin:$PATH";
 
 # Load the shell dotfiles, and then some:
 # * ~/.path can be used to extend `$PATH`.
 # * ~/.extra can be used for other settings you don’t want to commit.
-for file in ~/.{path,bash_prompt,exports,aliases,functions,extra}; do
-        [ -r "$file" ] && [ -f "$file" ] && source "$file"
-done
-unset file
+for file in ~/.{path,exports,aliases,functions,extra}; do
+	[ -r "$file" ] && [ -f "$file" ] && source "$file";
+done;
+unset file;
 
-source "$HOME/.homesick/repos/homeshick/homeshick.sh"
+# homeshick
+export HOMESHICK_DIR="$(brew --prefix)/opt/homeshick";
+source "$(brew --prefix)/opt/homeshick/homeshick.sh";
 
-source `brew --prefix`/etc/profile.d/z.sh
+# z
+. "$(brew --prefix)/etc/profile.d/z.sh";
 
-if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+# zsh-autosuggestions
+source "$(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh";
+
+# zsh-syntax-highlighting
+source "$(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh";
+
+# zsh-history-substring-search
+source "$(brew --prefix)/opt/zsh-history-substring-search/zsh-history-substring-search.zsh";
+bindkey -M emacs '^P' history-substring-search-up
+bindkey -M emacs '^N' history-substring-search-down
+
+# hub
+eval "$(hub alias -s)";
+
+# direnv
+eval "$(direnv hook zsh)";
+
+# nvm
+. "$(brew --prefix)/opt/nvm/nvm.sh";
+
+# rbenv
+if which rbenv &> /dev/null; then
+	eval "$(rbenv init -)";
+fi;

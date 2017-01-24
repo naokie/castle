@@ -10,7 +10,7 @@ brew cask install alfred
 # brew cask install android-file-transfer
 # brew cask install appzapper
 # brew cask install arduino
-brew cask install asepsis
+# brew cask install asepsis
 brew cask install atom
 brew cask install bartender
 # brew cask install bittorrent-sync
@@ -47,13 +47,13 @@ brew cask install path-finder
 # brew cask install shortcat
 # brew cask install sizeup
 # brew cask install slack
-brew cask install skype
+# brew cask install skype
 brew cask install sourcetree
 brew cask install sublime-text3
-# brew cask install the-unarchiver
+brew cask install the-unarchiver
 # brew cask install thunderbird
 # brew cask install totalfinder
-# brew cask install tower
+brew cask install tower
 # brew cask install transmission
 brew cask install transmit
 # brew cask install vagrant
