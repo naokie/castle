@@ -45,6 +45,7 @@ NeoBundle 'Shougo/vimproc.vim', {
       \    },
       \ }
 NeoBundle 'Shougo/vimshell.vim'
+NeoBundle 'editorconfig/editorconfig-vim'
 
 "" Snippets
 NeoBundle 'SirVer/ultisnips'
@@ -52,6 +53,7 @@ NeoBundle 'honza/vim-snippets'
 
 "" Color
 NeoBundle 'tomasr/molokai'
+NeoBundle 'zenorocha/dracula-theme', {'rtp': 'vim/'}
 
 "" Custom bundles
 
@@ -150,6 +152,7 @@ set number
 let no_buffers_menu=1
 highlight BadWhitespace ctermbg=red guibg=red
 colorscheme molokai
+color Dracula
 
 set mousemodel=popup
 set t_Co=256
@@ -165,7 +168,7 @@ if has("gui_running")
 else
   let g:CSApprox_loaded = 1
 
-  if $COLORTERM == 'gnome-terminal'
+     if $COLORTERM == 'gnome-terminal'
     set term=gnome-256color
   else
     if $TERM == 'xterm'

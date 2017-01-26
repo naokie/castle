@@ -9,6 +9,7 @@ function heisei() {
 
 source $HOME/.zsh/zaw/zaw.zsh
 zstyle ':filter-select' case-insensitive yes
+zstyle ':filter-select' hist-find-no-dups yes
 bindkey '^R' zaw-history
 
 export GOPATH=$HOME
@@ -25,3 +26,5 @@ zle -N peco-src
 bindkey '^]' peco-src
 
 eval "$(direnv hook zsh)"
+
+source ~/perl5/perlbrew/etc/bashrc

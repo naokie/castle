@@ -45,7 +45,7 @@ ZSH_THEME="dracula"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(brew brew-cask git git-flow osx rails rsync vagrant tmux zsh-syntax-highlighting)
+plugins=(git git-flow github gulp osx rails zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
