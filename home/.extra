@@ -1,13 +1,3 @@
-function saytime() {
-	date +"%H時%M分です" | say -v Kyoko
-}
-
-function heisei() {
-	local heisei=$(($(date +%Y)-1988))
-	say -v Kyoko "平成$heisei年です"
-}
-
-source $HOME/.zsh/zaw/zaw.zsh
 zstyle ':filter-select' case-insensitive yes
 zstyle ':filter-select' hist-find-no-dups yes
 bindkey '^R' zaw-history

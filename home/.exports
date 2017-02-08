@@ -1,5 +1,5 @@
 # Make vim the default editor
-export EDITOR="vim"
+export EDITOR="nvim"
 
 # Prefer Japanese and use UTF-8
 export LANG="ja_JP.UTF-8"
@@ -14,5 +14,4 @@ export MANPAGER="less -X"
 # Always enable colored `grep` output
 export GREP_OPTIONS="--color=auto"
 
-# Link Homebrew casks in `/Applications` rather than `~/Applications`
-export HOMEBREW_CASK_OPTS="--appdir=/Applications"
+export DISABLE_AUTO_TITLE=true
