@@ -37,15 +37,29 @@ export PATH="$HOME/bin:$PATH"
 # * ~/.path can be used to extend `$PATH`.
 # * ~/.extra can be used for other settings you don’t want to commit.
 for file in ~/.{path,exports,aliases,functions,extra}; do
-	[ -r "$file" ] && [ -f "$file" ] && source "$file"
+  [ -r "$file" ] && [ -f "$file" ] && source "$file"
 done
 unset file
 
-if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+# homeshick
+export HOMESHICK_DIR="$(brew --prefix)/opt/homeshick"
+source "$(brew --prefix)/opt/homeshick/homeshick.sh"
 
+# rbenv
+if which rbenv > /dev/null; then
+  eval "$(rbenv init -)";
+fi
+
+# nvm
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 nvm use v6.9.5
+
+# hub
+eval "$(hub alias -s)"
+
+# direnv
+eval "$(direnv hook zsh)"
 
 # The next line updates PATH for the Google Cloud SDK.
 if [ -f "$HOME/google-cloud-sdk/path.zsh.inc" ]; then
