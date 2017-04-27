@@ -13,8 +13,17 @@ export LESS_TERMCAP_md="${yellow}";
 # Don’t clear the screen after quitting a manual page.
 export MANPAGER='less -X';
 
+# XDG Base Directory
+export XDG_CONFIG_HOME=$HOME/.config
+export XDG_CACHE_HOME=$HOME/.cache
+export XDG_DATA_HOME=$HOME/.local/share
+
 # https://github.com/creationix/nvm#installation
 export NVM_DIR="$HOME/.nvm";
 
 # https://golang.org/doc/code.html#GOPATH
 export GOPATH=$HOME
+
+# Homebrew
+export HOMEBREW_GITHUB_API_TOKEN="bed3c5f5685216df25553babbd0e68255b3c2d2b"
+
