@@ -85,6 +85,7 @@
 	precomposeunicode = false
 
 	autocrlf = input
+	editor = nvim
 
 [color]
 
@@ -153,7 +154,11 @@
 
 [url "git://gist.github.com/"]
 
-	insteadOf = "gist:"
+    insteadOf = "gist:"
+
+[credential]
+
+    helper = osxkeychain
 
 [ghq]
 
