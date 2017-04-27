@@ -1,10 +1,5 @@
 #!/usr/bin/env zsh
 
-source $HOME/src/github.com/zsh-users/zaw/zaw.zsh
-zstyle ':filter-select' case-insensitive yes
-zstyle ':filter-select' hist-find-no-dups yes
-bindkey '^R' zaw-history
-
 function peco-src() {
 	local selected_dir=$(ghq list --full-path | peco --query "$LBUFFER");
 	if [ -n "$selected_dir" ]; then
@@ -15,3 +10,14 @@ function peco-src() {
 }
 zle -N peco-src;
 bindkey '^]' peco-src;
+
+function fzf-gulp() {
+    local task=$(gulp --tasks-simple | fzf);
+    if [ -n "$task" ]; then
+        BUFFER="gulp ${task}";
+        zle accept-line;
+    fi;
+    # zle clear-screen;
+}
+zle -N fzf-gulp;
+bindkey '^\' fzf-gulp;
