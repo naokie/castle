@@ -10,3 +10,6 @@ ghq get zsh-users/zaw;
 mkdir "~/.nvm";
 
 echo "bundler" > "$(rbenv root)/default-gems";
+
+curl https://sdk.cloud.google.com | zsh;
+

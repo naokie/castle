@@ -33,12 +33,11 @@ fi;
 brew install wget --with-iri
 
 # Install more recent versions of some OS X tools.
-# brew install vim --override-system-vi
+# brew install vim --with-override-system-vi
 # brew install homebrew/dupes/grep
 # brew install homebrew/dupes/openssh
 
 # Install other useful binaries
-# brew install ack
 brew install ag
 # brew install ctags
 brew install direnv
@@ -50,25 +49,24 @@ brew install homeshick
 brew install hub
 # brew install imagemagick --with-webp
 # brew install macvim
-# brew install mercurial
-brew install openssl
-# brew install p7zip
+brew install nvm
+brew install p7zip
 brew install peco
 # brew install pv
+# brew install pwgen
 brew install rbenv
 brew install rbenv-default-gems
 brew install rbenv-gemset
-# brew install readline
-# brew install reattach-to-user-namespace
+brew install reattach-to-user-namespace
 # brew install redis
 # brew install rename
 # brew install ssh-copy-id
-# brew install tig
+brew install tig
 brew install tmux
 brew install tree
-# brew install webkit2png
+brew install webkit2png
 brew install z
-brew install zopfli
+# brew install zopfli
 brew install zsh-autosuggestions
 brew install zsh-history-substring-search
 brew install zsh-syntax-highlighting
