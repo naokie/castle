@@ -1,70 +1,67 @@
-# Path to your oh-my-zsh configuration.
-ZSH=$HOME/.oh-my-zsh
+# zplug
+source ~/.zplug/init.zsh
 
-# Set name of the theme to load.
-# Look in ~/.oh-my-zsh/themes/
-# Optionally, if you set this to "random", it'll load a random theme each
-# time that oh-my-zsh is loaded.
-ZSH_THEME="dracula"
+zplug "yous/vanilli.sh"
 
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
+zplug "zsh-users/zsh-completions"
+zplug "zsh-users/zsh-autosuggestions"
+zplug "zsh-users/zsh-history-substring-search", defer:3
+zplug "zsh-users/zsh-syntax-highlighting", defer:2
+zplug "zsh-users/zaw", use:zaw.zsh
+zstyle ':filter-select' case-insensitive yes
+zstyle ':filter-select' hist-find-no-dups yes
+zplug "hlissner/zsh-autopair", defer:2
 
-# Set to this to use case-sensitive completion
-# CASE_SENSITIVE="true"
+zplug "glidenote/hub-zsh-completion"
+zplug "Dannyzen/cf-zsh-autocomplete-plugin"
+zplug "lukechilds/zsh-better-npm-completion", defer:2
+zplug "littleq0903/gcloud-zsh-completion", as:command, use:"src/*"
 
-# Uncomment this to disable bi-weekly auto-update checks
-# DISABLE_AUTO_UPDATE="true"
+zplug "junegunn/fzf-bin", from:gh-r, as:command, rename-to:fzf, use:"*darwin*amd64*"
 
-# Uncomment to change how often before auto-updates occur? (in days)
-# export UPDATE_ZSH_DAYS=13
+# zplug "sindresorhus/pure", use:pure.zsh, from:github, as:theme
+zplug "dracula/zsh", as:theme
 
-# Uncomment following line if you want to disable colors in ls
-# DISABLE_LS_COLORS="true"
+if ! zplug check --verbose; then
+  printf "Install? [y/N]: "
+  if read -q; then
+    echo; zplug install
+  fi
+fi
 
-# Uncomment following line if you want to disable autosetting terminal title.
-# DISABLE_AUTO_TITLE="true"
+# bindkey
+bindkey -e
 
-# Uncomment following line if you want to disable command autocorrection
-# DISABLE_CORRECTION="true"
+bindkey -M emacs '^P' history-substring-search-up
+bindkey -M emacs '^N' history-substring-search-down
 
-# Uncomment following line if you want red dots to be displayed while waiting for completion
-# COMPLETION_WAITING_DOTS="true"
+bindkey '^R' zaw-history
 
-# Uncomment following line if you want to disable marking untracked files under
-# VCS as dirty. This makes repository status check for large repositories much,
-# much faster.
-# DISABLE_UNTRACKED_FILES_DIRTY="true"
+# setopt
+setopt pushd_minus
 
-# Uncomment following line if you want to  shown in the command execution time stamp
-# in the history command output. The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|
-# yyyy-mm-dd
-# HIST_STAMPS="mm/dd/yyyy"
+setopt no_beep
+setopt no_list_beep
+setopt no_hist_beep
 
-# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(bundler git git-flow hub gulp osx rails tmux yarn)
+setopt no_case_glob
+setopt extended_glob
 
-source $ZSH/oh-my-zsh.sh
+setopt hist_ignore_all_dups
+setopt hist_save_nodups
+setopt hist_ignore_space
+setopt append_history
 
-# User configuration
-
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
-# export MANPATH="/usr/local/man:$MANPATH"
-
-# # Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
-
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
-
-# ssh
-# export SSH_KEY_PATH="~/.ssh/dsa_id"
+setopt always_last_prompt
+setopt auto_menu
+setopt globdots
 
 [ -f ~/.zshrc.local ] && source ~/.zshrc.local
+
+zplug load --verbose
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f ~/google-cloud-sdk/path.zsh.inc ]; then source ~/google-cloud-sdk/path.zsh.inc; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f ~/google-cloud-sdk/completion.zsh.inc ]; then source ~/google-cloud-sdk/completion.zsh.inc; fi

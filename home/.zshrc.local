@@ -5,29 +5,19 @@ export PATH="$HOME/bin:$PATH";
 # * ~/.path can be used to extend `$PATH`.
 # * ~/.extra can be used for other settings you don’t want to commit.
 for file in ~/.{path,exports,aliases,functions,extra}; do
-	[ -r "$file" ] && [ -f "$file" ] && source "$file";
+  [ -r "$file" ] && [ -f "$file" ] && source "$file";
 done;
 unset file;
 
 # homeshick
-export HOMESHICK_DIR="$(brew --prefix)/opt/homeshick";
-source "$(brew --prefix)/opt/homeshick/homeshick.sh";
+# export HOMESHICK_DIR="$(brew --prefix)/opt/homeshick";
+# source "$(brew --prefix)/opt/homeshick/homeshick.sh";
 
 # z
 . "$(brew --prefix)/etc/profile.d/z.sh";
 
-# zsh-autosuggestions
-source "$(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh";
-
-# zsh-syntax-highlighting
-source "$(brew --prefix)/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh";
-
-# zsh-history-substring-search
-source "$(brew --prefix)/opt/zsh-history-substring-search/zsh-history-substring-search.zsh";
-bindkey -M emacs '^P' history-substring-search-up
-bindkey -M emacs '^N' history-substring-search-down
-
 # hub
+export GITHUB_TOKEN=3b4b4d93487da4d5aaf23e9db6851ff68cbc0aab
 eval "$(hub alias -s)";
 
 # direnv
@@ -38,5 +28,9 @@ eval "$(direnv hook zsh)";
 
 # rbenv
 if which rbenv &> /dev/null; then
-	eval "$(rbenv init -)";
+  eval "$(rbenv init -)";
 fi;
+
+# prelbrew
+source ~/perl5/perlbrew/etc/bashrc
+
