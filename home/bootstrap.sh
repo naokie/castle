@@ -13,3 +13,4 @@ echo "bundler" > "$(rbenv root)/default-gems";
 
 curl https://sdk.cloud.google.com | zsh;
 
+ln -s /Applications/Visual\ Studio\ Code\ -\ Insiders.app/Contents/Resources/app/bin/code $HOME/bin/code

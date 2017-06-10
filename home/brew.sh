@@ -67,9 +67,10 @@ brew install tree
 brew install webkit2png
 brew install z
 # brew install zopfli
-brew install zsh-autosuggestions
-brew install zsh-history-substring-search
-brew install zsh-syntax-highlighting
+brew install zplug
+# brew install zsh-autosuggestions
+# brew install zsh-history-substring-search
+# brew install zsh-syntax-highlighting
 
 # Remove outdated versions from the cellar.
 brew cleanup

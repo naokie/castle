@@ -5,8 +5,8 @@ zplug "yous/vanilli.sh"
 
 zplug "zsh-users/zsh-completions"
 zplug "zsh-users/zsh-autosuggestions"
-zplug "zsh-users/zsh-history-substring-search", defer:3
 zplug "zsh-users/zsh-syntax-highlighting", defer:2
+zplug "zsh-users/zsh-history-substring-search"
 zplug "zsh-users/zaw", use:zaw.zsh
 zstyle ':filter-select' case-insensitive yes
 zstyle ':filter-select' hist-find-no-dups yes
