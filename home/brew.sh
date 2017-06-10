@@ -54,6 +54,7 @@ brew install p7zip
 brew install peco
 # brew install pv
 # brew install pwgen
+brew install python3
 brew install rbenv
 brew install rbenv-default-gems
 brew install rbenv-gemset
