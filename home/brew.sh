@@ -10,14 +10,14 @@ brew upgrade
 
 # Install GNU core utilities (those that come with macOS are outdated).
 # Don’t forget to add `$(brew --prefix coreutils)/libexec/gnubin` to `$PATH`.
-# brew install coreutils
+brew install coreutils
 
 # Install some other useful utilities like `sponge`.
-# brew install moreutils
+brew install moreutils
 # Install GNU `find`, `locate`, `updatedb`, and `xargs`, `g`-prefixed.
-# brew install findutils
+brew install findutils
 # Install GNU `sed`, overwriting the built-in `sed`.
-# brew install gnu-sed --with-default-names
+brew install gnu-sed --with-default-names
 # Install latest Zsh.
 # Note: don’t forget to add `/usr/local/bin/zsh` to `/etc/shells` before
 # running `chsh`.
@@ -33,9 +33,9 @@ fi;
 brew install wget --with-iri
 
 # Install more recent versions of some OS X tools.
-# brew install vim --with-override-system-vi
-# brew install homebrew/dupes/grep
-# brew install homebrew/dupes/openssh
+brew install vim --with-override-system-vi
+brew install grep
+brew install openssh
 
 # Install other useful binaries
 brew install ag
@@ -47,7 +47,7 @@ brew install git-flow
 brew install go
 brew install homeshick
 brew install hub
-# brew install imagemagick --with-webp
+brew install imagemagick --with-webp
 # brew install macvim
 brew install nvm
 brew install p7zip
@@ -60,8 +60,8 @@ brew install rbenv-default-gems
 brew install rbenv-gemset
 brew install reattach-to-user-namespace
 # brew install redis
-# brew install rename
-# brew install ssh-copy-id
+brew install rename
+brew install ssh-copy-id
 brew install tig
 brew install tmux
 brew install tree
