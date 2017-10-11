@@ -7,7 +7,9 @@ ghq get dracula/iterm;
 
 ghq get zsh-users/zaw;
 
-mkdir "~/.nvm";
+mkdir .nvm;
+
+curl -L https://install.perlbrew.pl | bash
 
 echo "bundler" > "$(rbenv root)/default-gems";
 
