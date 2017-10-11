@@ -33,6 +33,3 @@ repo = 'itchyny/lightline.vim'
 
 [[plugins]]
 repo = 'editorconfig/editorconfig-vim'
-
-[[plugins]]
-repo = 'dracula/vim'
