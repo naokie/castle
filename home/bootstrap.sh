@@ -17,4 +17,4 @@ sh ./installer.sh "$HOME/.cache/dein"
 
 pip3 install neovim
 
-ln -s /Applications/Visual\ Studio\ Code\ -\ Insiders.app/Contents/Resources/app/bin/code $HOME/bin/code
+ln -s /Applications/Visual\ Studio\ Code\ -\ Insiders.app/Contents/Resources/app/bin/code $HOME/bin/vsc
