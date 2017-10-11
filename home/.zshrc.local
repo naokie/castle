@@ -10,8 +10,8 @@ done;
 unset file;
 
 # homeshick
-# export HOMESHICK_DIR="$(brew --prefix)/opt/homeshick";
-# source "$(brew --prefix)/opt/homeshick/homeshick.sh";
+export HOMESHICK_DIR="$(brew --prefix)/opt/homeshick";
+source "$(brew --prefix)/opt/homeshick/homeshick.sh";
 
 # z
 . "$(brew --prefix)/etc/profile.d/z.sh";
