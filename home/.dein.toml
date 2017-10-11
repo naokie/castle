@@ -31,3 +31,8 @@ repo = 'sheerun/vim-polyglot'
 [[plugins]]
 repo = 'itchyny/lightline.vim'
 
+[[plugins]]
+repo = 'editorconfig/editorconfig-vim'
+
+[[plugins]]
+repo = 'dracula/vim'
