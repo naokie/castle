@@ -53,12 +53,6 @@ When setting up a new OSX, you may want to install some common [Homebrew](http:/
 ./brew.sh
 ```
 
-### Install oh-my-zsh
-
-```bash
-sh -c "$(wget https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
-```
-
 ### Change Default Shell to Zsh
 
 ```bash
