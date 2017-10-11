@@ -1,11 +1,6 @@
 #!/usr/bin/env bash
 
-ghq get dracula/zsh;
-ln -s $HOME/src/github.com/dracula/zsh/dracula.zsh-theme $ZSH/themes/dracula.zsh-theme;
-
 ghq get dracula/iterm;
-
-ghq get zsh-users/zaw;
 
 mkdir .nvm;
 
