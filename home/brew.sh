@@ -49,6 +49,7 @@ brew install homeshick
 brew install hub
 brew install imagemagick --with-webp
 # brew install macvim
+brew install neovim
 brew install nvm
 brew install p7zip
 brew install peco
