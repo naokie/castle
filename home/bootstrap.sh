@@ -13,6 +13,8 @@ echo "bundler" > "$(rbenv root)/default-gems";
 
 curl https://sdk.cloud.google.com | zsh;
 
+curl -s "https://get.sdkman.io" | bash;
+
 curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > installer.sh
 sh ./installer.sh "$HOME/.cache/dein"
 

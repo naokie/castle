@@ -19,6 +19,8 @@ zplug "littleq0903/gcloud-zsh-completion", as:command, use:"src/*"
 
 zplug "junegunn/fzf-bin", from:gh-r, as:command, rename-to:fzf, use:"*darwin*amd64*"
 
+zplug "$(brew --prefix)", from:local, use:"bin/aws_zsh_completer.sh"
+
 # zplug "sindresorhus/pure", use:pure.zsh, from:github, as:theme
 zplug "dracula/zsh", as:theme
 
@@ -56,8 +58,6 @@ setopt always_last_prompt
 setopt auto_menu
 setopt globdots
 
-[ -f ~/.zshrc.local ] && source ~/.zshrc.local
-
 zplug load --verbose
 
 # The next line updates PATH for the Google Cloud SDK.
@@ -65,3 +65,9 @@ if [ -f ~/google-cloud-sdk/path.zsh.inc ]; then source ~/google-cloud-sdk/path.z
 
 # The next line enables shell command completion for gcloud.
 if [ -f ~/google-cloud-sdk/completion.zsh.inc ]; then source ~/google-cloud-sdk/completion.zsh.inc; fi
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="~/.sdkman"
+[[ -s "~/.sdkman/bin/sdkman-init.sh" ]] && source "~/.sdkman/bin/sdkman-init.sh"
+
+[ -f ~/.zshrc.local ] && source ~/.zshrc.local
