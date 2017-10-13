@@ -4,6 +4,8 @@ ghq get dracula/iterm;
 
 mkdir .nvm;
 
+curl -Lo ~/.config/fish/functions/fisher.fish --create-dirs https://git.io/fisher
+
 curl -L https://install.perlbrew.pl | bash
 
 echo "bundler" > "$(rbenv root)/default-gems";

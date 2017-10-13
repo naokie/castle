@@ -22,10 +22,12 @@ brew install gnu-sed --with-default-names
 # Note: don’t forget to add `/usr/local/bin/zsh` to `/etc/shells` before
 # running `chsh`.
 brew install zsh
+brew install fish
 
 # Switch to using brew-installed bash as default shell
 if ! fgrep -q '/usr/local/bin/zsh' /etc/shells; then
   echo '/usr/local/bin/zsh' | sudo vim -a /etc/shells;
+  echo '/usr/local/bin/fish' | sudo vim -a /etc/shells;
   chsh -s /usr/local/bin/zsh;
 fi;
 
