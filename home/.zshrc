@@ -17,10 +17,10 @@ zplug "glidenote/hub-zsh-completion"
 zplug "Dannyzen/cf-zsh-autocomplete-plugin"
 zplug "lukechilds/zsh-better-npm-completion", defer:2
 zplug "littleq0903/gcloud-zsh-completion", as:command, use:"src/*"
-
-zplug "junegunn/fzf-bin", from:gh-r, as:command, rename-to:fzf, use:"*darwin*amd64*"
-
 zplug "$(brew --prefix)", from:local, use:"bin/aws_zsh_completer.sh"
+
+zplug "paulirish/git-open", as:plugin
+zplug "junegunn/fzf-bin", from:gh-r, as:command, rename-to:fzf, use:"*darwin*amd64*"
 
 # zplug "sindresorhus/pure", use:pure.zsh, from:github, as:theme
 zplug "dracula/zsh", as:theme
