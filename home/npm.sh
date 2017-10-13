@@ -1,18 +1,21 @@
 #!/usr/bin/env bash
 
-nodebrew install-binary stable
-nodebrew use stable
+npm install -g npm
 
-node -v
-
-npm install -g babel
-npm install -g bower
-npm install -g browser-sync
-npm install -g browserify
-npm install -g coffee-script
-npm install -g cordova
-npm install -g grunt-cli
-npm install -g gulp
-npm install -g watchify
-npm install -g webpack
-npm install -g yo
+# npm install -g git-open
+# npm install -g git-recent
+npm install -g diff-so-fancy
+npm install -g eslint
+npm install -g eslint-config-google
+npm install -g eslint-config-xo
+npm install -g eslint-plugin-import
+npm install -g eslint-plugin-json
+npm install -g eslint-plugin-optimize-regex
+npm install -g eslint-plugin-promise
+npm install -g eslint-plugin-unicorn
+npm install -g gulp-cli
+npm install -g prettier
+npm install -g trash-cli
+npm install -g typescript
+npm install -g vue-cli
+npm install -g yarn
