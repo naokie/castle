@@ -6,3 +6,9 @@ source ~/.config/fish/functions.fish
 if test -e "$HOME/.extra.fish";
   source ~/.extra.fish
 end
+
+# hub
+eval (hub alias -s)
+
+# direnv
+eval (direnv hook fish)
