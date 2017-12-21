@@ -68,6 +68,7 @@ brew install ssh-copy-id
 brew install tig
 brew install tmux
 brew install tree
+brew install watchman
 brew install webkit2png
 brew install z
 # brew install zopfli

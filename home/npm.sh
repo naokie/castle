@@ -13,6 +13,7 @@ npm install -g eslint-plugin-json
 npm install -g eslint-plugin-optimize-regex
 npm install -g eslint-plugin-promise
 npm install -g eslint-plugin-unicorn
+npm install -g flow-bin
 npm install -g gulp-cli
 npm install -g prettier
 npm install -g trash-cli
