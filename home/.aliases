@@ -58,6 +58,7 @@ alias update='sudo softwareupdate -i -a; brew update; brew upgrade; brew cleanup
 
 # Google Chrome
 alias chrome='/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome'
+alias chrome-canary='/Applications/Google\ Chrome\ Canary.app/Contents/MacOS/Google\ Chrome\ Canary'
 
 # IP addresses
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
@@ -163,6 +164,7 @@ alias reload="exec $SHELL -l"
 alias path='echo -e ${PATH//:/\\n}'
 
 # npm
+alias npmplease="rm -rf node_modules/ && rm -f package-lock.json && npm install"
 alias ni='npm install'
 alias nid='npm install --save-dev'
 alias nig='npm install --global'
@@ -173,3 +175,4 @@ alias nr='npm run'
 alias ns='npm start'
 alias nf='npm cache clean && rm -rf node_modules && npm install'
 alias nlg='npm list --global --depth=0'
+alias yarnc="rm -rf node_modules/ && rm -f yarn.lock && yarn install"
