@@ -4,7 +4,7 @@ source $ZPLUG_HOME/init.zsh
 
 zplug "yous/vanilli.sh"
 
-zplug "zsh-users/zsh-completions"
+zplug "zsh-users/zsh-completions", lazy:true
 zplug "zsh-users/zsh-autosuggestions"
 zplug "zsh-users/zsh-syntax-highlighting", defer:2
 zplug "zsh-users/zsh-history-substring-search"
@@ -17,13 +17,14 @@ zplug "glidenote/hub-zsh-completion"
 zplug "Dannyzen/cf-zsh-autocomplete-plugin"
 zplug "lukechilds/zsh-better-npm-completion", defer:2
 zplug "littleq0903/gcloud-zsh-completion", as:command, use:"src/*"
-zplug "$(brew --prefix)", from:local, use:"bin/aws_zsh_completer.sh"
+zplug "b4b4r07/emoji-cli"
 
 zplug "paulirish/git-open", as:plugin
 zplug "junegunn/fzf-bin", from:gh-r, as:command, rename-to:fzf, use:"*darwin*amd64*"
 
-# zplug "sindresorhus/pure", use:pure.zsh, from:github, as:theme
-zplug "dracula/zsh", as:theme
+zplug "mafredri/zsh-async", from:github
+zplug "sindresorhus/pure", use:pure.zsh, from:github, as:theme
+# zplug "dracula/zsh", as:theme
 
 if ! zplug check --verbose; then
   printf "Install? [y/N]: "
