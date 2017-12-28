@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 ghq get dracula/iterm;
+ghq get jamiew/git-friendly
 
 mkdir .nvm;
 

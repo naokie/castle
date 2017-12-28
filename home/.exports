@@ -22,7 +22,17 @@ export XDG_DATA_HOME=$HOME/.local/share
 export NVM_DIR="$HOME/.nvm";
 
 # https://golang.org/doc/code.html#GOPATH
-export GOPATH=$HOME
+export GOPATH=$HOME;
 
 # Homebrew
-#export HOMEBREW_GITHUB_API_TOKEN=HOMEBREW_GITHUB_API_TOKEN
+#export HOMEBREW_GITHUB_API_TOKEN=HOMEBREW_GITHUB_API_TOKEN;
+
+# pip
+export PIP_CONFIG_FILE="$HOME/.pip.conf";
+
+# git-friendly
+export GIT_FRIENDLY_NO_BUNDLE=true;
+export GIT_FRIENDLY_NO_NPM=true;
+export GIT_FRIENDLY_NO_YARN=true;
+export GIT_FRIENDLY_NO_BOWER=true;
+export GIT_FRIENDLY_NO_COMPOSER=true;
