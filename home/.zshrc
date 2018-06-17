@@ -4,7 +4,7 @@ source $ZPLUG_HOME/init.zsh
 
 zplug "yous/vanilli.sh"
 
-zplug "zsh-users/zsh-completions", lazy:true
+zplug "zsh-users/zsh-completions"
 zplug "zsh-users/zsh-autosuggestions"
 zplug "zsh-users/zsh-syntax-highlighting", defer:2
 zplug "zsh-users/zsh-history-substring-search"
@@ -18,6 +18,8 @@ zplug "Dannyzen/cf-zsh-autocomplete-plugin"
 zplug "lukechilds/zsh-better-npm-completion", defer:2
 zplug "littleq0903/gcloud-zsh-completion", as:command, use:"src/*"
 zplug "b4b4r07/emoji-cli"
+zplug "lukechilds/zsh-nvm"
+zplug "g-plane/zsh-yarn-autocompletions", hook-build:"./zplug.zsh", defer:2
 
 zplug "paulirish/git-open", as:plugin
 zplug "junegunn/fzf-bin", from:gh-r, as:command, rename-to:fzf, use:"*darwin*amd64*"
@@ -26,12 +28,12 @@ zplug "mafredri/zsh-async", from:github
 zplug "sindresorhus/pure", use:pure.zsh, from:github, as:theme
 # zplug "dracula/zsh", as:theme
 
-if ! zplug check --verbose; then
-  printf "Install? [y/N]: "
-  if read -q; then
-    echo; zplug install
-  fi
-fi
+# if ! zplug check --verbose; then
+#   printf "Install? [y/N]: "
+#   if read -q; then
+#     echo; zplug install
+#   fi
+# fi
 
 # bindkey
 bindkey -e
@@ -60,6 +62,7 @@ setopt always_last_prompt
 setopt auto_menu
 setopt globdots
 
+[ -f ~/.zshrc.local ] && source ~/.zshrc.local
+
 zplug load --verbose
 
-[ -f ~/.zshrc.local ] && source ~/.zshrc.local
