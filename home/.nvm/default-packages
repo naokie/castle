@@ -1,0 +1,14 @@
+@vue/cli
+@vue/cli-init
+diff-so-fancy
+firebase-tools
+eslint
+eslint-config-google
+eslint-config-xo
+gulp-cli
+now
+prettier
+rimraf
+ts-node
+tslint
+typescript
