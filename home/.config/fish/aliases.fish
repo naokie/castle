@@ -14,10 +14,7 @@ alias g="git"
 alias v="nvim"
 alias h="history"
 alias j="jobs"
-
-alias mv 'command gmv --interactive --verbose'
-alias rm 'command grm --interactive --verbose'
-alias cp 'command gcp --interactive --verbose'
+alias o="open"
 
 # Google Chrome
 alias chrome='/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome'
@@ -44,5 +41,7 @@ alias nit='npm install; and npm test'
 alias nk='npm link'
 alias nr='npm run'
 alias ns='npm start'
-alias nf='npm cache clean; and rm -rf node_modules; and npm install'
+alias nf='rm -rf node_modules; and npm install'
 alias nlg='npm list --global --depth=0'
+
+alias yarnc='rm -rf node_modules; and rm -f yarn.lock; and yarn'
