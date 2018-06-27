@@ -5,6 +5,8 @@ ghq get jamiew/git-friendly
 
 mkdir .nvm;
 
+avn setup
+
 curl -Lo ~/.config/fish/functions/fisher.fish --create-dirs https://git.io/fisher
 
 curl -L https://install.perlbrew.pl | bash

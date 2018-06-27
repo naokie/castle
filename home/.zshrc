@@ -62,7 +62,6 @@ setopt always_last_prompt
 setopt auto_menu
 setopt globdots
 
-[ -f ~/.zshrc.local ] && source ~/.zshrc.local
-
 zplug load --verbose
 
+[ -f ~/.zshrc.local ] && source ~/.zshrc.local
