@@ -1,71 +1,51 @@
-# bindkey
-bindkey -e
-
-bindkey -M emacs '^P' history-substring-search-up
-bindkey -M emacs '^N' history-substring-search-down
-
-# setopt
-setopt pushd_minus
-setopt pushd_ignore_dups
-
-setopt no_beep
-setopt no_list_beep
-setopt no_hist_beep
-
-setopt hist_ignore_dups
-setopt hist_ignore_all_dups
-setopt hist_save_nodups
-setopt hist_expire_dups_first
-setopt hist_find_no_dups
-setopt hist_ignore_space
-
-setopt always_last_prompt
-setopt auto_cd
-setopt auto_menu
-setopt auto_pushd
-setopt complete_in_word
-setopt globdots
-
-# completion
-zstyle ':completion:*:default' menu select=2
-zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
-
 # Add `~/bin` to the `$PATH`
-export PATH="$HOME/bin:$PATH"
+export PATH="$HOME/bin:$PATH";
 
 # Load the shell dotfiles, and then some:
 # * ~/.path can be used to extend `$PATH`.
 # * ~/.extra can be used for other settings you don’t want to commit.
 for file in ~/.{path,exports,aliases,functions,extra}; do
-  [ -r "$file" ] && [ -f "$file" ] && source "$file"
-done
-unset file
+  [ -r "$file" ] && [ -f "$file" ] && source "$file";
+done;
+unset file;
 
 # homeshick
-export HOMESHICK_DIR="$(brew --prefix)/opt/homeshick"
-source "$(brew --prefix)/opt/homeshick/homeshick.sh"
-
-# rbenv
-if which rbenv > /dev/null; then
-  eval "$(rbenv init -)";
-fi
-
-# nvm
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
-nvm use v6.9.5
+export HOMESHICK_DIR="$(brew --prefix)/opt/homeshick";
+source "$(brew --prefix)/opt/homeshick/homeshick.sh";
 
 # hub
-eval "$(hub alias -s)"
+#export GITHUB_TOKEN=GITHUB_TOKEN
+eval "$(hub alias -s)";
 
 # direnv
-eval "$(direnv hook zsh)"
+eval "$(direnv hook zsh)";
+
+# rbenv
+if which rbenv &> /dev/null; then
+  eval "$(rbenv init -)";
+fi;
+
+# prelbrew
+[[ -s "$HOME/perl5/perlbrew/etc/bashrc" ]] && source "$HOME/perl5/perlbrew/etc/bashrc"
 
 # The next line updates PATH for the Google Cloud SDK.
-if [ -f "$HOME/google-cloud-sdk/path.zsh.inc" ]; then
-  source "$HOME/google-cloud-sdk/path.zsh.inc"
-fi
+if [ -f $HOME/google-cloud-sdk/path.zsh.inc ]; then source $HOME/google-cloud-sdk/path.zsh.inc; fi
 
-if [ -f "$HOME/google-cloud-sdk/completion.zsh.inc" ]; then
-  source "$HOME/google-cloud-sdk/completion.zsh.inc"
-fi
+# The next line enables shell command completion for gcloud.
+if [ -f $HOME/google-cloud-sdk/completion.zsh.inc ]; then source $HOME/google-cloud-sdk/completion.zsh.inc; fi
+
+# THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+
+# pip zsh completion start
+function _pip_completion {
+  local words cword
+  read -Ac words
+  read -cn cword
+  reply=( $( COMP_WORDS="$words[*]" \
+             COMP_CWORD=$(( cword-1 )) \
+             PIP_AUTO_COMPLETE=1 $words[1] ) )
+}
+compctl -K _pip_completion pip3
+# pip zsh completion end

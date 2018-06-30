@@ -1,20 +1,27 @@
+#!/usr/bin/env zsh
+
 zstyle ':filter-select' case-insensitive yes
 zstyle ':filter-select' hist-find-no-dups yes
 bindkey '^R' zaw-history
 
-export GOPATH=$HOME
-
 function peco-src() {
-	local selected_dir=$(ghq list --full-path | peco --query "$LBUFFER")
+	local selected_dir=$(ghq list --full-path | peco --query "$LBUFFER");
 	if [ -n "$selected_dir" ]; then
-		BUFFER="cd ${selected_dir}"
-		zle accept-line
-	fi
-	zle clear-screen
+		BUFFER="cd ${selected_dir}";
+		zle accept-line;
+	fi;
+	zle clear-screen;
 }
-zle -N peco-src
-bindkey '^]' peco-src
+zle -N peco-src;
+bindkey '^]' peco-src;
 
-eval "$(direnv hook zsh)"
-
-source ~/perl5/perlbrew/etc/bashrc
+function fzf-gulp() {
+    local task=$(gulp --tasks-simple | fzf);
+    if [ -n "$task" ]; then
+        BUFFER="gulp ${task}";
+        zle accept-line;
+    fi;
+    # zle clear-screen;
+}
+zle -N fzf-gulp;
+bindkey '^\' fzf-gulp;
