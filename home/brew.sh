@@ -40,8 +40,9 @@ brew install grep
 brew install openssh
 
 # Install other useful binaries
-brew install ag
+brew install bat
 # brew install ctags
+brew install diff-so-fancy
 brew install direnv
 brew install ghq
 brew install git
@@ -65,11 +66,13 @@ brew install reattach-to-user-namespace
 # brew install redis
 brew install rename
 brew install ssh-copy-id
+brew install the_silver_searcher
 brew install tig
 brew install tmux
 brew install tree
 brew install watchman
 brew install webkit2png
+brew install yarn --without-node
 brew install z
 # brew install zopfli
 brew install zplug
