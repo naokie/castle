@@ -1,8 +1,4 @@
 @vue/cli
-@vue/cli-init
-avn
-avn-nvm
-diff-so-fancy
 firebase-tools
 eslint
 eslint-config-google
@@ -11,6 +7,4 @@ gulp-cli
 now
 prettier
 rimraf
-ts-node
-tslint
 typescript
