@@ -1,11 +1,11 @@
 #!/usr/bin/env zsh
 
-# Make vim the default editor.
-export EDITOR='nvim';
-
 # Prefer US English and use UTF-8.
 export LANG='en_US.UTF-8';
 export LC_ALL='en_US.UTF-8';
+
+# Make vim the default editor.
+export EDITOR='nvim';
 
 # Highlight section titles in manual pages.
 export LESS_TERMCAP_md="${yellow}";
@@ -17,6 +17,9 @@ export MANPAGER='less -X';
 export XDG_CONFIG_HOME=$HOME/.config
 export XDG_CACHE_HOME=$HOME/.cache
 export XDG_DATA_HOME=$HOME/.local/share
+
+# zplug
+export ZPLUG_HOME=/usr/local/opt/zplug
 
 # https://github.com/creationix/nvm#installation
 export NVM_DIR="$HOME/.nvm";
