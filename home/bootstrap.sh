@@ -21,7 +21,7 @@ pip3 install neovim
 ln -s /Applications/Visual\ Studio\ Code\ -\ Insiders.app/Contents/Resources/app/bin/code $HOME/bin/code
 
 # fisher
-curl https://git.io/fisher --create-dirs -sLo ~/.config/fish/functions/fisher.fish
+curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher
 
 # deno
 curl -L https://deno.land/x/install/install.sh | sh
