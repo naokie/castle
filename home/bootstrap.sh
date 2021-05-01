@@ -6,7 +6,7 @@ ghq get dracula/iterm;
 # curl -L https://install.perlbrew.pl | bash;
 
 # nvm
-curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.34.0/install.sh | bash
+# curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.34.0/install.sh | bash
 
 # gcloud
 curl https://sdk.cloud.google.com | zsh;
