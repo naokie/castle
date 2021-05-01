@@ -28,48 +28,52 @@ brew install fish
 if ! fgrep -q '/usr/local/bin/zsh' /etc/shells; then
   echo '/usr/local/bin/zsh' | sudo vim -a /etc/shells;
   echo '/usr/local/bin/fish' | sudo vim -a /etc/shells;
-  chsh -s /usr/local/bin/zsh;
+  chsh -s /usr/local/bin/fish;
 fi;
 
 # Install `wget` with IRI support.
 brew install wget --with-iri
 
 # Install more recent versions of some OS X tools.
-brew install vim --with-override-system-vi
+# brew install vim --with-override-system-vi
 brew install grep
-brew install openssh
+# brew install openssh
 
 # Install other useful binaries
-brew install ag
+brew install bat
 # brew install ctags
+brew install diff-so-fancy
 brew install direnv
+brew install exa
+brew install fd
+brew install fnm
+brew install fzf
+brew install gh
 brew install ghq
 brew install git
-brew install git-flow
+brew install git-friendly/git-friendly/git-friendly
 brew install go
-brew install homeshick
-brew install hub
+# brew install homeshick
+# brew install hub
 brew install imagemagick --with-webp
-# brew install macvim
 brew install neovim
 # brew install nvm
 brew install p7zip
-brew install peco
-# brew install pv
-# brew install pwgen
-brew install python3
 brew install rbenv
 brew install rbenv-default-gems
 brew install rbenv-gemset
 brew install reattach-to-user-namespace
 # brew install redis
 brew install rename
+brew install ripgrep
+brew install sd
 brew install ssh-copy-id
 brew install tig
-brew install tmux
+# brew install tmux
 brew install tree
-brew install watchman
-brew install webkit2png
+# brew install watchman
+# brew install webkit2png
+# brew install yarn
 brew install z
 # brew install zopfli
 brew install zplug

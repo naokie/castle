@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 
 ghq get dracula/iterm;
-ghq get jamiew/git-friendly;
 
 # perlbrew
 # curl -L https://install.perlbrew.pl | bash;
