@@ -18,7 +18,7 @@ sh ./installer.sh "$HOME/.cache/dein"
 pip3 install neovim
 
 # visual studio code
-ln -s /Applications/Visual\ Studio\ Code\ -\ Insiders.app/Contents/Resources/app/bin/code $HOME/bin/vsc
+ln -s /Applications/Visual\ Studio\ Code\ -\ Insiders.app/Contents/Resources/app/bin/code $HOME/bin/code
 
 # fisher
 curl https://git.io/fisher --create-dirs -sLo ~/.config/fish/functions/fisher.fish
